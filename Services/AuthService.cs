@@ -123,9 +123,9 @@ namespace apiAutenticacao.Services
                 };
             }
 
-            AlterarSenhaDTO dados = new AlterarSenhaDTO();
+            AlterarSenhaDTO dados = new AlterarSenhaDTO(); // serve para criar um novo objeto do tipo AlterarSenhaDTO
             {
-                bool isValidPassword = Verify(dadosAlterarSenha.SenhaAtual, usuario.Senha);
+                bool isValidPassword = Verify(dadosAlterarSenha.SenhaAtual, usuario.Senha); // serve para verificar se a senha atual está correta
                 if (isValidPassword)
                 {
                     usuario.Senha = HashPassword(dadosAlterarSenha.NovaSenha); // serve para criptografar a senha
